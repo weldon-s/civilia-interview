@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Region of Waterloo Transit</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
+
+    <style>
+        :root {
+            --black: rgb(65, 64, 66);
+            --green: rgb(138,197,66);
+            --yellow: rgb(252,183,61);
+        }
+
+        header {
+            background-color: var(--green);
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Hind', sans-serif;
+            color: var(--black);
+        }
+
+        .marker {
+            filter: saturate(0);
+        }
+
+        #map {
+            height: 80vh;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #map-search-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            grid-gap: 10px;
+            width: 100%;
+        }
+
+        #root {
+            width: 100%;
+        }
+
+        #page {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main > * {
+            max-width: 95%;
+        }
+
+        #match-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .match {
+            font-size: 10px;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        input {
+            width: 75%;
+        }
+
+        .match:hover {
+            animation: 0.2s forwards 1 button-hover ease-in-out;
+            cursor: pointer;
+        }
+
+        @keyframes button-hover {
+            0% {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                background-color: var(--yellow);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="script.mjs" type="module"></script>
+</body>
+</html>

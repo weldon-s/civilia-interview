@@ -1,0 +1,11 @@
+{
+    "agencies": [
+      {
+        "agency_key": "waterloo-transit",
+        "path": "./gtfs/"
+      }
+    ],
+    "coordinatePrecision": 5,
+    "outputType": "shape",
+    "outputFormat": "lines-and-stops"
+  }

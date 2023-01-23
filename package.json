@@ -1,0 +1,9 @@
+{
+  "name": "civilia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
